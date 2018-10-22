@@ -1,0 +1,251 @@
+/**
+ * Body
+ */
+
+body {
+  max-width: 80em;
+  margin: 0 auto;
+
+  --bg-color: #EEE;
+  --panel-color: #FFF;
+
+  --main-color: #396;
+
+  --dark-color: #333;
+  --light-color: #CCC;
+
+  --serif-font: 'Merriweather';
+  --sans-font: 'Open Sans Condensed';
+
+  background-color: var(--bg-color);
+}
+
+/**
+ * Generic
+ */
+
+a, p, input, li {
+  font-family: var(--serif-font), serif;
+}
+
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans-font), sans-serif;
+}
+
+input[type=text], input[type=password] {
+  box-sizing: border-box;
+
+  padding: 1em 0;
+
+  border: 0;
+  border-bottom: 1px solid var(--light-color);
+
+  background-color: var(--panel-color);
+}
+
+input[type="submit"], input[type="button"] {
+  padding: 1em;
+
+  background: var(--main-color);
+  color: var(--panel-color);
+
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.2em;
+
+  border:none;
+  border-radius: 2px;
+
+  text-transform: uppercase;
+}
+
+/**
+ * Primary header
+ */
+
+body > header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  margin: 0;
+  padding: 1em;
+
+  font-size: 2em;
+  text-align: center;
+
+  color: var(--dark-color);
+}
+
+body > header h1 {
+  margin: 0;
+  flex-grow: 1;
+  grid-column-start: 2;
+}
+
+body > header h1 i {
+  color: var(--main-color);
+}
+
+body > header h1 a {
+  font-family: var(--sans-font), sans-serif;
+}
+
+body > header nav ul {
+  padding: 0;
+}
+
+body > header nav li {
+  display: inline-block;
+  font-size: 0.5em;
+  border-right: 1px solid var(--dark-color);
+  padding: 0 1em;
+}
+
+body > header nav li:last-child {
+  border: none;
+}
+
+
+/**
+ * Login
+ */
+
+#login, #signup {
+  width: 30em;
+
+  margin: 2em auto;
+
+  border: 1px solid var(--light-color);
+
+  background: white;
+}
+
+#login header, #signup header {
+  color: var(--panel-color);
+  padding: 2em 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--main-color);  
+}
+
+#login header h2, #signup header h2 {
+  margin: 0;
+}
+
+#login form, #signup form {
+  margin: 0;
+  padding: 1em;
+
+  background-color: var(--panel-color);
+} 
+
+#login input, #signup input {
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+}
+
+#login footer p, #signup footer p {
+  margin: 0;
+  padding-bottom: 2em;
+
+  text-align: center;
+  background-color: var(--panel-color);
+}
+
+/**
+ * Lists
+ */
+
+#lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;	
+}
+
+#lists article.list {
+  border: 1px solid black;
+
+  margin: 1em;
+  background-color: var(--panel-color);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+#lists article.list header{
+  background-color: var(--main-color);
+  padding: 1em;
+}
+
+#lists article.list header h2{
+  color: var(--panel-color);
+  margin: 0;
+}
+
+#lists article.list ol{
+  padding: 1em;
+}
+
+#lists article.list ol li{
+  display: block;
+
+  margin: 0;
+  padding: 1em 1em 1em 0;
+}
+
+#lists article.list ol li a{
+  float: left;
+  padding: 0 .5em 0 0;
+  visibility: hidden;
+}
+
+#lists article.list ol li:hover a{
+  visibility: visible;
+}
+
+#lists article.list ol li label{
+  display: block;
+  max-width: 20em;
+}
+
+#lists article.list ol li label input{
+  float: right;
+}
+
+#lists article.list form {
+  padding: 1em;
+}
+
+#lists article.list form input {
+  width: 100%;
+  padding: 1em;
+}
+
+#lists article.new-list {
+  border: 1px solid black;
+
+  margin: 1em;
+  background-color: var(--panel-color);
+}
+
+#lists article.new-list form {
+  background-color: var(--main-color);
+}
+
+#lists article.new-list form input {
+  padding: .5em;
+
+  color: var(--panel-color);
+  background-color: var(--main-color);
+
+  font-family: var(--sans-font);
+  font-size: 1.5em;
+  font-weight: bold;
+
+  border-bottom: none;
+}
