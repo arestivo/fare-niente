@@ -11,4 +11,10 @@
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch()?true:false; // return true if a line exists
   }
+
+  function insertUser($username, $password) {
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('INSERT INTO user VALUES(?, ?)');
+    $stmt->execute(array($username, sha1($password)));
+  }
 ?>
