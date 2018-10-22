@@ -6,7 +6,7 @@
     
     <header><h2>Welcome Back</h2></header>
 
-    <form method="post" action="action_login.php">
+    <form method="post" action="../actions/action_login.php">
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
       <input type="submit" value="Login">
@@ -27,14 +27,14 @@
 
     <header><h2>New Account</h2></header>
 
-    <form method="post" action="action_signup.php">
+    <form method="post" action="../actions/action_signup.php">
       <input type="text" name="username" placeholder="username" required>
       <input type="password" name="password" placeholder="password" required>
       <input type="submit" value="Signup">
     </form>
 
     <footer>
-      <p>Already have an account? <a href="index.php">Login!</a></p>
+      <p>Already have an account? <a href="login.php">Login!</a></p>
     </footer>
 
   </section>

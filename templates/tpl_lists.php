@@ -12,7 +12,7 @@
   ?>
 
   <article class="new-list">
-    <form action="action_add_list.php" method="post">
+    <form action="../actions/action_add_list.php" method="post">
       <input type="text" name="list_name" placeholder="Add list">
     </form>
   </article>
@@ -37,7 +37,7 @@
       ?>
     </ol>
 
-    <form action="action_add_item.php" method="post">
+    <form action="../actions/action_add_item.php" method="post">
       <input type="hidden" name="list_id" value="<?=$list['list_id']?>">
       <input type="text" name="item_text" placeholder="Add item">
     </form>
@@ -51,7 +51,7 @@
  * an item_id, item_done and item_text fields. 
  **/ ?>
   <li>
-    <a href="action_delete_item.php?item_id=<?=$item['item_id']?>"><i class="fas fa-trash"></i></a>
+    <a href="../actions/action_delete_item.php?item_id=<?=$item['item_id']?>"><i class="fas fa-trash"></i></a>
     <label>
       <input type="checkbox" <?=$item['item_done']?'checked':''?>>
       <?=$item['item_text']?>

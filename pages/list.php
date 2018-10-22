@@ -1,8 +1,8 @@
 <?php 
-  include_once('database/db_list.php');
+  include_once('../database/db_list.php');
 
-  include_once('templates/tpl_common.php');
-  include_once('templates/tpl_lists.php');
+  include_once('../templates/tpl_common.php');
+  include_once('../templates/tpl_lists.php');
 
   $lists = getUserLists('john');
   foreach ($lists as $k => $list)
