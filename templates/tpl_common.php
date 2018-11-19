@@ -8,10 +8,12 @@
   <html>
 
     <head>
+      <title>Fare Niente</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="../css/style.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300" rel="stylesheet">
+      <script src="../js/main.js" defer></script>
     </head>
 
     <body>
