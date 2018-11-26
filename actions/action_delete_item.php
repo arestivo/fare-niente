@@ -10,10 +10,13 @@
   $item = getItem($item_id);
 
   // Verifies if item exists and user is owner
-  if (!$item || !checkIsListOwner($_SESSION['username'], $item['list_id']))
+  if (!$item || !checkIsListOwner($_SESSION['username'], $item['list_id'])) {
+    $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Can\'t delete this item!');
     die(header('Location: ../pages/list.php'));
+  }
 
   deleteItem($item_id);
+  $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Item deleted!');
 
   header('Location: ../pages/list.php');
 ?>
