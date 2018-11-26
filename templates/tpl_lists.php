@@ -54,7 +54,7 @@
     <a href="../actions/action_delete_item.php?item_id=<?=$item['item_id']?>"><i class="fas fa-trash"></i></a>
     <label>
       <input type="checkbox" <?=$item['item_done']?'checked':''?> data-id="<?=$item['item_id']?>">
-      <?=$item['item_text']?>
+      <?=htmlspecialchars($item['item_text'])?>
     </label>
   </li>
 <?php } ?>

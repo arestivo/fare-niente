@@ -9,6 +9,9 @@
   $list_name = $_POST['list_name'];
   $username = $_SESSION['username'];
 
+  // Remove disallowed characters
+  $list_name = preg_replace ("/[^a-zA-Z\s]/", '', $list_name);
+
   insertList($list_name, $username);
 
   header('Location: ../pages/list.php');

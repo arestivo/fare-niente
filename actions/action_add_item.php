@@ -4,7 +4,7 @@
 
   // Verify if user is logged in
   if (!isset($_SESSION['username']))
-  die(header('Location: ../pages/login.php'));
+    die(header('Location: ../pages/login.php'));
 
   $list_id = $_POST['list_id'];
   $item_text = $_POST['item_text'];
