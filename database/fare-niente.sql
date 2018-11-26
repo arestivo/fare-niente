@@ -16,7 +16,7 @@ CREATE TABLE item (
   list_id INTEGER NOT NULL REFERENCES list
 );
 
-INSERT INTO user VALUES ('john', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220');
+INSERT INTO user VALUES ('john', '$2y$12$cH5Hmh/4JgKSEM4ZCih1jOOSItL2WW.XZruOxkG0udohjH5xMu6FG');
 
 INSERT INTO list VALUES (NULL, 'Things to do', 'john');
 INSERT INTO list VALUES (NULL, 'Things NOT to do', 'john');

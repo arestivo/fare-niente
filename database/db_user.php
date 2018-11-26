@@ -7,14 +7,20 @@
    */
   function checkUserPassword($username, $password) {
     $db = Database::instance()->db();
-    $stmt = $db->prepare('SELECT * FROM user WHERE username = ? AND password = ?');
-    $stmt->execute(array($username, sha1($password)));
-    return $stmt->fetch()?true:false; // return true if a line exists
+
+    $stmt = $db->prepare('SELECT * FROM user WHERE username = ?');
+    $stmt->execute(array($username));
+
+    $user = $stmt->fetch();
+    return $user !== false && password_verify($password, $user['password']);
   }
 
   function insertUser($username, $password) {
     $db = Database::instance()->db();
+
+    $options = ['cost' => 12];
+
     $stmt = $db->prepare('INSERT INTO user VALUES(?, ?)');
-    $stmt->execute(array($username, sha1($password)));
+    $stmt->execute(array($username, password_hash($password, PASSWORD_DEFAULT, $options)));
   }
 ?>
