@@ -6,6 +6,12 @@
   if (!isset($_SESSION['username']))
     die(header('Location: ../pages/login.php'));
 
+  // Verifies CSRF token
+  if ($_SESSION['csrf'] != $_GET['csrf']) {
+    $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Invalid request!');
+    die(header('Location: ../pages/list.php'));
+  }
+
   $item_id = $_GET['item_id'];
   $item = getItem($item_id);
 
